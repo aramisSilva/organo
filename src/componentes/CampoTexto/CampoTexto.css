@@ -1,0 +1,23 @@
+.titulo {
+  font-family: "Prata";
+  font-size: 32pt;
+  font-weight: 400;
+  text-align: center;
+}
+.campo-texto {
+  margin: 24px 0;
+}
+.campo-texto label {
+  display: block;
+  font-size: 20pt;
+  margin-bottom: 8px;
+}
+.campo-texto input {
+  background-color: #fff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  border: none;
+  padding: 15px;
+  font-size: 24px;
+  box-sizing: border-box;
+}
