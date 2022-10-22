@@ -1,19 +1,28 @@
 import React from "react";
 import "./Formulario.css";
 import CampoTexto from "../CampoTexto";
+import ListaSuspensa from "../ListaSuspensa";
+import Botao from "../Botao";
 const Formulario = () => {
+  const disciplinas = ["Front-end", "Back-end", "UFAL"];
+  const aoSalvar = (evento) => {
+    evento.preventDefault();
+    console.log("Formulário Submetido");
+  };
   return (
     <>
       <section className="formulario">
-        <form>
+        <form onSubmit={aoSalvar}>
           <h2 className="titulo">
-            Preencha os dados para criar o card do colaborador.
+            Preencha os dados para criar o card da atividade.
           </h2>
           <CampoTexto
+            obrigatorio={true}
             label="Atividade"
             placeholder="Digite o que você irá estudar"
           />
           <CampoTexto
+            obrigatorio={true}
             label="Disciplina"
             placeholder="Em qual disciplina eu me enquadro"
           />
@@ -21,7 +30,8 @@ const Formulario = () => {
             label="Imagem"
             placeholder="Informe o endereço da imagem"
           />
-          <CampoTexto label="Time" />
+          <ListaSuspensa label="Tipo de atividade" itens={disciplinas} />
+          <Botao>Criar card</Botao>
         </form>
       </section>
     </>
