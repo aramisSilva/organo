@@ -5,14 +5,11 @@ import ListaSuspensa from "../ListaSuspensa";
 import Botao from "../Botao";
 const Formulario = () => {
   const disciplinas = ["Front-end", "Back-end", "UFAL"];
-  const aoSalvar = (evento) => {
-    evento.preventDefault();
-    console.log("Formulário Submetido");
-  };
+
   return (
     <>
       <section className="formulario">
-        <form onSubmit={aoSalvar}>
+        <form>
           <h2 className="titulo">
             Preencha os dados para criar o card da atividade.
           </h2>
